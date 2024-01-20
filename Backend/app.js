@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const PORT = 3000; // You can change the port if needed
-const connectDB = require('./connect_db/conn');
-const userRoutes = require('./routes/userRouter');
+const connectDB = require('../Backend/connect_DB/conn');
+// const userRoutes = require('./routes/userRouter');
 const bodyParser = require('body-parser');
 
 
@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 connectDB();
-app.use('/', userRoutes);
+// app.use('/', userRoutes);
 
 
 app.get('/',(req,res)=>{
