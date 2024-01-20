@@ -24,15 +24,21 @@
 
 .room-info {
     height: 40%;
-    width: 100%;
-
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: solid 1px #0003;
+    border-radius: 10px;
+    background: #ffffff05;
+    box-shadow: inset 0px 2px 6px #ffffff30;
 }
 
 #profile-pic {
-
+    font-size: 7rem;
+    background: rgba(255, 255, 255, 0.837);
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.726);
     width: 25%;
     aspect-ratio: 1;
     border: solid 1px black;
@@ -75,31 +81,26 @@
 }
 
 .contact-info-writing .name {
-    font-size: 35px;
+    font-size: 3rem;
 }
 
-.contact-info-writing .contact {
-    font-size: 25px;
+
+.contact-info-writing .det {
+    font-size: 18px;
+    color: #a5a5a5df;
+
+    span {
+        font-size: 16px;
+        font-style: italic;
+        color: white;
+    }
 }
 
-.contact-info-writing .contact span {
-    font-size: 20px;
-    color: red;
-}
 
-.contact-info-writing .address {
-    font-size: 25px;
-}
-
-.contact-info-writing .address span {
-    font-size: 20px;
-    color: red;
-}
 
 .contact-info-operations {
     height: 20%;
     width: 100%;
-    /* background-color: rgb(255, 153, 0); */
     display: flex;
     gap: 1rem;
 }
