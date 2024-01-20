@@ -7,7 +7,7 @@ const ResultItem = () => {
   return (
     <div className="room-box flex justify-between">
       <div className="details flex flex-col p-8 flex-grow">
-        <h1 className="room_title">Hawas-Vila</h1>
+        <h1 className="room_title">Sobar Vila</h1>
         <div className="mini_details">
           <h3 className="room_det">
             <span>Price: </span>₹ 12,50/month

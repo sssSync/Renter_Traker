@@ -1,14 +1,14 @@
 import "./room_style.scss";
 
 import roomImg from "../../assets/room-img/room.jpg";
-import FaqItem from "./FaqSec";
+import FaqSec from "./FaqSec";
 const RoomDetails = () => {
   return (
     <div className="pt-36 h-full flex justify-center items-center ">
       <div className="main_room-div w-[80%] mt-12">
         <div className="mainDetails flex justify-between ">
           <div className="text_details">
-            <h1 className="room_title ">Hawas vila</h1>
+            <h1 className="room_title ">Sobar vila</h1>
             <h3>
               Good Quality, will have a good time and good food. Feel like home.24*7 electricity and
               water supply.Always Clean and hyaenic. No Smoking and Drinking allowed
@@ -21,7 +21,7 @@ const RoomDetails = () => {
               </h3>
               <h3>
                 <span className="text-white">Owner:</span>
-                <span className="text-gray-400">Mia khalifa</span>
+                <span className="text-gray-400">Shubredu Neogi</span>
               </h3>
               <h3>
                 <span className="text-white">Near By : </span>
@@ -197,12 +197,14 @@ const RoomDetails = () => {
           <h1 className="section-title">FAQ Section-</h1>
           <div className="faq-box">
             <div className="inputSection">
-              <textarea name="question" id="" />
+              <textarea name="question" id="" placeholder="Ask Your Any Question ..."></textarea>
               <button className="justify-self-end">Submit</button>
             </div>
-            <FaqItem />
-            <FaqItem />
-            <FaqItem />
+            <div className="faqBox">
+              <FaqSec answer={"No"} />
+              <FaqSec answer={"Yeas we"} />
+              <FaqSec answer={null} />
+            </div>
           </div>
         </div>
       </div>
