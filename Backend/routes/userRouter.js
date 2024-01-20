@@ -51,4 +51,57 @@ router.post("/login", async (req, res) => {
 });
 
 
+// Add room
+router.post('/addroom', authenticateToken, async (req, res) => {
+  try {
+    // Get the user ID from the authenticated token
+    const userId = req.user._id;
+
+    // Check if the user has an active subscription
+    const user = await User.findById(userId);
+    if (!user.subscription) {
+      return res.status(403).json({ error: 'User does not have an active subscription' });
+    }
+
+    // Extract data from the request body and create a new room
+    const newRoom = new Room(req.body);
+    await newRoom.save();
+
+    res.status(201).json({ message: 'Room added successfully' });
+  } catch (error) {
+    console.error('Error adding room:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Remove room
+router.delete('/removeroom/:title', authenticateToken, async (req, res) => {
+  try {
+    // Get the user ID from the authenticated token
+    const userId = req.user._id;
+
+    // Check if the user has an active subscription
+    const user = await User.findById(userId);
+    if (!user.subscription) {
+      return res.status(403).json({ error: 'User does not have an active subscription' });
+    }
+
+    const title = req.params.title;
+    const result = await Room.deleteOne({ Title: title });
+
+    if (result.deletedCount > 0) {
+      res.json({ message: 'Room removed successfully' });
+    } else {
+      res.status(404).json({ error: 'Room not found' });
+    }
+  } catch (error) {
+    console.error('Error removing room:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+
+
+
+
 module.exports = router;
