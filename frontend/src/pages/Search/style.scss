@@ -1,0 +1,14 @@
+.left_part {
+    position: relative;
+
+    &::after {
+        content: " ";
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 95%;
+        background: rgba(68, 68, 68, 0.679);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7579364509475666) 3%, rgba(57, 57, 57, 0.9764238459055498) 13%, rgba(56, 56, 56, 1) 48%, rgba(59, 59, 59, 0.9568160027682948) 85%, rgba(0, 0, 0, 0.5506535377823004) 97%);
+        top: 5%;
+    }
+}

@@ -1,0 +1,79 @@
+nav {
+    width: 80vw;
+    height: 48px;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    z-index: 200;
+    transform: translateX(-50%);
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(32px);
+    background-blend-mode: overlay;
+    background-color: rgba(85, 85, 85, 0.246);
+    border-radius: 1rem;
+    border: 1px solid #ffffff2f;
+    gap: 1rem;
+    box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.4117647059);
+
+    .logo {
+        font-size: 1.1rem;
+        font-weight: bolder;
+
+    }
+
+
+    // .btns {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     // border: 1px solid white;
+    //     width: 70%;
+    //     align-items: center;
+    //     font-family: "Poppins";
+
+    .menu {
+        ul {
+            display: flex;
+            gap: 3.5rem;
+            align-items: center;
+
+            li {
+                list-style: none;
+                font-size: 1.2rem;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .cta_btns {
+        button {
+            // background-color: white;
+            background-color: var(--button-bg);
+            color: white;
+            padding: 5px 1rem;
+            border-radius: 10px;
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: var(--button-bg-hover);
+            }
+        }
+    }
+
+    // }
+}
+
+@media (max-width: 460px) {
+    nav {
+        width: 90%;
+        top: 5%;
+        padding: 16px 24px;
+    }
+}

@@ -1,0 +1,196 @@
+.mainDetails {
+    // border: 1px solid #f6f6f638;
+    //     border-radius: 10px;
+    gap: 7rem;
+
+    .text_details {
+        border: 1px solid rgba(146, 152, 244, 0.22);
+        border-radius: 10px;
+        background: linear-gradient(to top right, rgba(255, 255, 255, 0.13), rgba(179, 188, 221, 0.16), rgba(135, 123, 179, 0.26), rgba(121, 97, 207, 0.21));
+        padding-left: 3rem;
+        padding-right: 6rem;
+
+        .room_title {
+            font-size: 6rem;
+        }
+
+        .mini-details {
+            font-size: 1.14rem;
+
+            h3 {
+                margin: 1px 0;
+
+            }
+        }
+    }
+
+
+    .image_details {
+
+        .extra-img {
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+            margin-right: 6px;
+            gap: 5px;
+
+            .mini-img {
+                border-radius: 5px;
+                overflow: hidden;
+                filter: grayscale(1);
+                transition: filter 0.3s ease-in-out, transform 0.4s ease-in-out;
+
+                &:hover {
+                    filter: grayscale(0);
+                    transform: scale(1.08);
+                }
+
+                img {
+                    width: 5.6rem;
+                    aspect-ratio: 1;
+                    object-fit: cover;
+                }
+            }
+
+            .last-img {
+                --width-line: 10px;
+                position: relative;
+
+                &::after,
+                &::before {
+                    content: ' ';
+                    position: absolute;
+                    background: rgba(30, 30, 31, 0.82);
+                }
+
+                &::before {
+                    width: 100%;
+                    height: var(--width-line);
+                    top: 50%;
+                    translate: 0 -50%;
+                }
+
+                &::after {
+                    width: var(--width-line);
+                    height: 100%;
+                    top: 0;
+                    left: 50%;
+                    translate: -50% 0;
+                }
+            }
+        }
+
+        .main-img {
+            border-radius: 11px;
+            overflow: hidden;
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: 25rem;
+                object-fit: cover;
+                transition: transform 0.4s ease-in-out;
+            }
+        }
+    }
+}
+
+
+.horizon {
+
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.034) 3%, rgba(255, 255, 255, 0.323) 48%, rgba(255, 255, 255, 0.071) 97%);
+}
+
+h1.section-title {
+    font-size: 3rem;
+    font-weight: 500;
+    font-style: oblique;
+    margin-bottom: 2rem;
+}
+
+.extra_details {
+
+
+    .details-box {
+
+        .details-point {
+            padding: 1.6rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.17);
+            border-radius: 10px;
+            background: #ffffff0f;
+
+            h2 {
+                font-size: 2.2rem;
+                font-style: oblique;
+                margin: 0 0 2rem 0;
+            }
+
+            h3 {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                margin-top: 1rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #ffffff1c;
+            }
+        }
+    }
+
+}
+
+
+.contact_section {
+    .contact_details {
+        padding: 0 2rem;
+
+        h3 {
+            .icon {
+                margin-right: 10px;
+            }
+
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+            margin: 0.4rem 0;
+
+            .icon {
+                width: 1.3rem;
+            }
+        }
+    }
+}
+
+
+.faq_details {
+    .inputSection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+        gap: 2rem;
+        padding: 0 2rem;
+
+        textarea {
+            width: 100%;
+            height: 5rem;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+            resize: none;
+            background: rgba(255, 255, 255, 0.798);
+        }
+
+        button {
+            border: 1px solid white;
+            padding: 5px 10px;
+            background: var(--button-bg);
+        }
+    }
+}
