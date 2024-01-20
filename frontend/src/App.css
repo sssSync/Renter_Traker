@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,400&family=Roboto:wght@300;400&display=swap");
 
+@font-face {
+  font-family: "Roxal";
+  src: url("./assets/RoxaleStoryItalic-GOwLa.woff") format("woff");
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 

@@ -11,6 +11,8 @@ const Home = () => {
       }}
     >
       <Intro />
+
+      <div className="about mt-28" id="about"></div>
     </div>
   );
 };
