@@ -137,6 +137,79 @@ router.get('/search/landmark', async (req, res) => {
 });
 
 
+  // Add a question to the FAQ section
+  router.post('/faq/question', authenticateToken, async (req, res) => {
+    try {
+      const { roomId, question } = req.body;
+  
+      // Find the room by _id and update the FAQ section
+      const room = await Room.findByIdAndUpdate(
+        roomId,
+        { $push: { faq: { question } } },
+        { new: true }
+      );
+  
+      res.json({ room });
+    } catch (error) {
+      console.error('Error adding question to FAQ:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  
+  
+  // Add an answer to a question in the FAQ section
+  router.post('/faq/answer', authenticateToken, async (req, res) => {
+    try {
+      const { roomId, questionIndex, answer } = req.body;
+  
+      // Find the room by _id and update the answer in the FAQ section
+      const room = await Room.findByIdAndUpdate(
+        roomId,
+        { $set: { [`faq.${questionIndex}.answer`]: answer } },
+        { new: true }
+      );
+  
+      const newRes = room.faq
+  
+      res.json({ newRes });
+    } catch (error) {
+      console.error('Error adding answer to FAQ:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+  
+  
+  // Add feedback to a room
+  router.post('/feedback', authenticateToken, async (req, res) => {
+    try {
+      const { roomId, feedback } = req.body;
+  
+      // Find the room by _id and update the feedback
+      const room = await Room.findByIdAndUpdate(
+        roomId,
+        { $push: { feedbacks: feedback } },
+        { new: true }
+      );
+  
+      // Calculate the average feedback and update the room
+      const totalFeedback = room.feedbacks.reduce((sum, value) => sum + value, 0);
+      const avgFeedback = Math.ceil(totalFeedback / room.feedbacks.length);
+  
+      // Update the room with the average feedback
+      const updatedRoom = await Room.findByIdAndUpdate(
+        roomId,
+        { $set: { feedback: avgFeedback } },
+        { new: true }
+      );
+  
+      res.json({ room: updatedRoom });
+    } catch (error) {
+      console.error('Error adding feedback:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+
+
 
 
 module.exports = router;
