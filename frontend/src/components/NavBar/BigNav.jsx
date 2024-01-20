@@ -20,7 +20,7 @@ const BigNav = () => {
               <Link to="/search">Search</Link>
             </li>
             <li>
-              <Link to="/">RoomAdd</Link>
+              <Link to="/roomadd">AddRoom</Link>
             </li>
           </ul>
         </div>

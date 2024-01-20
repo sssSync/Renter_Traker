@@ -1,0 +1,137 @@
+.main-add-page {
+    background-color: #161618;
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    padding: 2rem 5rem;
+}
+
+.mainForm {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    border: 1px solid rgb(251, 251, 251);
+    border-radius: 20px;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.11), rgba(72, 70, 70, 0.53), rgba(23, 23, 23, 0.1));
+}
+
+.owner-details {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-tag {
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.room-details {
+    margin: 10px;
+    padding: 10px;
+}
+
+.tp {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.allcheck {
+    display: flex;
+
+    input {
+        margin-left: 5px;
+    }
+}
+
+.allcheck div {
+    margin: 1rem;
+}
+
+.alldrop {
+    display: flex;
+}
+
+.alldrop div {
+    margin: 10px;
+}
+
+.desc {
+    outline: none;
+    width: 40%;
+    height: 80px;
+    resize: none;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.location {
+    margin: 10px;
+    padding: 10px;
+}
+
+.room-address {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.textarea {
+    textarea {
+
+        background: #ffffff17;
+        border-radius: 5px;
+    }
+}
+
+.room-address input {
+    height: 4rem;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    background: #ffffff3d;
+
+    &::placeholder {
+        color: white;
+    }
+}
+
+.land {
+    margin: 10px;
+}
+
+.land textarea {
+    outline: none;
+    width: 40%;
+    height: 80px;
+    resize: none;
+    padding: 10px;
+    border-radius: 5px;
+    background: #ffffff17;
+}
+
+.input {
+    width: 50%;
+    height: 4rem;
+    margin: 10px;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    background: #ffffff3d;
+
+    &::placeholder {
+        color: white;
+    }
+}
+
+.add-msg {
+    margin: 300px auto;
+    font-size: 7em;
+}
