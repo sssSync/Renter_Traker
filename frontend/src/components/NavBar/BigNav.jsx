@@ -14,7 +14,7 @@ const BigNav = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">About</Link>
+              <a href="#about">About</a>
             </li>
             <li>
               <Link to="/search">Search</Link>

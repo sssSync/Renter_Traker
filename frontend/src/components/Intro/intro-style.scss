@@ -1,11 +1,23 @@
-// @font-face {
-//     font-family: "Roxal";
-//     src: url("../../assets/RoxaleStoryItalic-GOwLa.woff") format("woff");
-// }
-
 .container {
     h1 {
         font-size: 5rem;
-        font-family: "Roxal";
+        font-family: "Roxal", sans-serif;
+        ;
     }
+}
+
+
+.about {
+    padding: 0 11rem;
+
+    h1 {
+        font-style: oblique;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    font-size: 1.6rem;
+    font-family: 'Poppins',
+    sans-serif;
+    margin-bottom: 3rem;
 }
