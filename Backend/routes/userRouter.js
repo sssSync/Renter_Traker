@@ -101,6 +101,41 @@ router.delete('/removeroom/:title', authenticateToken, async (req, res) => {
 });
 
 
+router.get('/search/address', async (req, res) => {
+  try {
+    const { district, state, city, pin, sector } = req.query;
+
+    const rooms = await Room.find({
+      'Address.district': { $regex: new RegExp(district, 'i') },
+      'Address.state': { $regex: new RegExp(state, 'i') },
+      'Address.city': { $regex: new RegExp(city, 'i') },
+      'Address.pin': { $regex: new RegExp(pin, 'i') },
+      'Address.sector': { $regex: new RegExp(sector, 'i') },
+    });
+
+    res.json({ rooms });
+  } catch (error) {
+    console.error('Error searching rooms by address:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Search rooms by landmark
+router.get('/search/landmark', async (req, res) => {
+  try {
+    const { landmark } = req.query;
+
+    const rooms = await Room.find({
+      landmark: { $regex: new RegExp(landmark, 'i') },
+    });
+
+    res.json({ rooms });
+  } catch (error) {
+    console.error('Error searching rooms by landmark:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 
 
 
