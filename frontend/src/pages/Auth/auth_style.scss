@@ -1,0 +1,114 @@
+ .main {
+     width: 40vw;
+     height: 100vh;
+     /* background-color: aquamarine;     */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding-top: 10rem;
+     width: 100%;
+     background: #161618;
+     padding-bottom: 5rem;
+ }
+
+ .page {
+     width: 70%;
+     height: 100%;
+     margin: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     background: linear-gradient(45deg, rgba(255, 255, 255, 0.11), rgba(72, 70, 70, 0.53), rgba(23, 23, 23, 0.1));
+ }
+
+ .left {
+     width: 40%;
+     height: 90%;
+     /* margin-right: 5px; */
+     border: 1px solid rgba(189, 189, 189, 0.355);
+     padding: 10px;
+     display: flex;
+     justify-content: center;
+     border-radius: 5px;
+     align-items: center;
+
+     h1 {
+         font-size: 2.4rem
+     }
+ }
+
+ .right {
+     width: 50%;
+     height: 90%;
+     border: 1px solid rgba(189, 189, 189, 0.355);
+     padding: 10px;
+     display: flex;
+     border-radius: 5px;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .header {
+     height: 20%;
+     width: 100%;
+     margin-bottom: 2px;
+     text-align: center;
+
+     h1 {
+         font-size: 3rem;
+         font-weight: 600;
+     }
+ }
+
+ .hero {
+     height: 70%;
+     margin-bottom: 2px;
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .hero span {
+     font-size: 1.5rem;
+ }
+
+ .hero input {
+     width: 98%;
+     height: 80%;
+     border: 1px solid #ffffff21;
+     border-radius: 5px;
+     outline: none;
+     background: #ffffff4f;
+ }
+
+ .name {
+     margin: 15px;
+ }
+
+ .number {
+     margin: 15px;
+ }
+
+ .password {
+     margin: 15px;
+
+ }
+
+
+ .send {
+     height: 20%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .btn {
+     width: 32%;
+     height: 3rem;
+     border: 1px solid #ffffff3d;
+     background: #b4b1b14d;
+     border-radius: 5px;
+     font-weight: bold;
+ }
