@@ -1,7 +1,7 @@
 import "./room_style.scss";
 
 import roomImg from "../../assets/room-img/room.jpg";
-import FaqItem from "./FaqSec";
+import FaqSec from "./FaqSec";
 const RoomDetails = () => {
   return (
     <div className="pt-36 h-full flex justify-center items-center ">
@@ -197,12 +197,14 @@ const RoomDetails = () => {
           <h1 className="section-title">FAQ Section-</h1>
           <div className="faq-box">
             <div className="inputSection">
-              <textarea name="question" id="" />
+              <textarea name="question" id="" placeholder="Ask Your Any Question ..."></textarea>
               <button className="justify-self-end">Submit</button>
             </div>
-            <FaqItem />
-            <FaqItem />
-            <FaqItem />
+            <div className="faqBox">
+              <FaqSec answer={"No"} />
+              <FaqSec answer={"Yeas we"} />
+              <FaqSec answer={null} />
+            </div>
           </div>
         </div>
       </div>
