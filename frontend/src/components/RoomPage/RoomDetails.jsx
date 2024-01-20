@@ -8,7 +8,7 @@ const RoomDetails = () => {
       <div className="main_room-div w-[80%] mt-12">
         <div className="mainDetails flex justify-between ">
           <div className="text_details">
-            <h1 className="room_title ">Hawas vila</h1>
+            <h1 className="room_title ">Sobar vila</h1>
             <h3>
               Good Quality, will have a good time and good food. Feel like home.24*7 electricity and
               water supply.Always Clean and hyaenic. No Smoking and Drinking allowed
@@ -21,7 +21,7 @@ const RoomDetails = () => {
               </h3>
               <h3>
                 <span className="text-white">Owner:</span>
-                <span className="text-gray-400">Mia khalifa</span>
+                <span className="text-gray-400">Shubredu Neogi</span>
               </h3>
               <h3>
                 <span className="text-white">Near By : </span>
